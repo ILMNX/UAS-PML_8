@@ -37,7 +37,7 @@ class ReportListScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: ListTile(
                   leading: const Icon(Icons.report_problem, color: Colors.red),
-                  title: Text(data['title'] ?? 'Laporan tanpa judul'),
+                  title: Text(data['facility'] ?? 'Laporan tanpa judul'),
                   subtitle: Text(data['description'] ?? 'Tidak ada deskripsi'),
                   trailing: Text(data['status'] ?? 'Status tidak diketahui'),
                   onTap: () {
@@ -87,9 +87,9 @@ class ReportDetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Judul:', style: Theme.of(context).textTheme.titleLarge),
+                Text('Fasilitas:', style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(height: 8),
-                Text(data['title'] ?? 'Tidak tersedia'),
+                Text(data['facility'] ?? 'Tidak tersedia'),
                 const SizedBox(height: 16),
                 Text('Deskripsi:', style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(height: 8),
