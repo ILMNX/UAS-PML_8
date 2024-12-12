@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pelaporan Fasilitas UNILA',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 95, 21, 243), // Your desired color
+        ),
       ),
       home: const HomeScreen(),
     );

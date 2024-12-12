@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'report_screen.dart';
-import 'report_list_screen.dart';
+// import 'report_list_screen.dart';
+// import 'profile_screen.dart'; // tambahkan import untuk profil screen
+import 'package:myapp/widgets/buttom_navbar.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,27 +19,21 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                foregroundColor: Colors.white,
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const ReportScreen()),
                 );
               },
-              child: const Text('Laporkan Fasilitas Rusak'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ReportListScreen()),
-                );
-              },
-              child: const Text('Lihat Laporan'),
+              child: const Text('Lapor Fasilitas Rusak'),
             ),
           ],
         ),
-      ),
+      ),bottomNavigationBar: Navbar(currentIndex: 0),
     );
   }
 }

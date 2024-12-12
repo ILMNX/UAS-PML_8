@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/widgets/buttom_navbar.dart';
 
 class ReportListScreen extends StatelessWidget {
   const ReportListScreen({super.key});
@@ -54,6 +55,7 @@ class ReportListScreen extends StatelessWidget {
           );
         },
       ),
+      bottomNavigationBar: Navbar(currentIndex: 1),
     );
   }
 }
