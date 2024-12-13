@@ -84,7 +84,7 @@ class _ReportFormState extends State<ReportForm> {
           TextFormField(
             controller: _descriptionController,
             decoration: const InputDecoration(labelText: 'Deskripsi Kerusakan'),
-            maxLines: 3,
+            maxLines: 2,
             validator: (value) => value!.isEmpty ? 'Masukkan deskripsi' : null,
           ),
           const SizedBox(height: 20),
