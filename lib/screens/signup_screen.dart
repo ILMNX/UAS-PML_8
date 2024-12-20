@@ -21,15 +21,16 @@ class _SignupScreenState extends State<SignupScreen> {
             child: Container(
                 margin: EdgeInsets.only(top: 20),
                 child: Image.asset(
-                  "assets/images/JustDuit.png",
+                  "assets/images/UNILA.jpeg",
                   width: 200,
                   height: 50,
-                )),
+                )
+              ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             child: Text(
-              "Sign Up Now and Unlock the Power of Justduit",
+              "Sign Up",
               style: TextStyle(
                 fontSize: 23.0,
                 fontFamily: 'Poppins-Regular',
