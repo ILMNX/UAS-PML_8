@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screens/home_screen.dart';
 import 'package:myapp/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -31,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Text(
-                "Hi, Welcome Back to JustDuit",
+                "Hi, Selamat datang kembali di FixItUnila",
                 style: TextStyle(
                   fontSize: 20.0,
                   fontFamily: 'Poppins-Regular',
@@ -124,6 +125,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 MaterialStateProperty.all<Color>(Colors.white),
                           ),
                           onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()));
                             setState(() {
                               isEmailValid = emailController.text.isNotEmpty;
                             });
